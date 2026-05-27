@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Create Tenant">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters slds-grid_vertical-align-end slds-wrap">
+
+                <div class="slds-col">
+                    <lightning-input required
+                        label="Tenant Name"
+                        value={tenantName}
+                        onchange={handleName}>
+                        
+                    </lightning-input>
+                </div>
+
+                <div class="slds-col">
+                    <lightning-input required
+                        type="phone"
+                        label="Phone"
+                        value={phone}
+                        onchange={handlePhone}>
+                    </lightning-input>
+                </div>
+
+                <div class="slds-col">
+                    <lightning-input required
+                        type="email"
+                        label="Email"
+                        value={email}
+                        onchange={handleEmail}>
+                    </lightning-input>
+                </div>
+
+                <div class="slds-col slds-shrink">
+                    <lightning-button
+                        label="Create Tenant"
+                        variant="brand"
+                        onclick={createTenant}>
+                    </lightning-button>
+                </div>
+
+            </div>
+        </div>
+    </lightning-card>
+
+</template>

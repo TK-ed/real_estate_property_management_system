@@ -1,0 +1,32 @@
+<!-- <template>
+  <template lwc:if={ready}>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+      <div class="slds-m-around_medium">
+        <p>Hello, {greeting}!</p>
+        <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+        <lightning-button-icon-stateful icon-name="greeting" title="Click me" onclick={handleClick}>Click me!!</lightning-button-icon-stateful>
+      </div>
+    </lightning-card>
+  </template>
+  <template lwc:else>
+    <div id="waiting">Loading…</div>
+  </template>
+  </template> -->
+  <template>
+    <lightning-input label="Min Price"></lightning-input>
+
+        <lightning-combobox
+            label="Availability"
+            options={statusOptions}>
+        </lightning-combobox>
+
+        <lightning-button label="Search"></lightning-button>
+
+        <lightning-datatable
+            data={properties}
+            columns={columns}>
+        </lightning-datatable>
+
+        <lightning-button label="Previous"></lightning-button>
+        <lightning-button label="Next"></lightning-button>
+  </template>

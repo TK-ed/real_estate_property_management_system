@@ -1,0 +1,90 @@
+<template>
+
+    <lightning-card title="Create Lease Agreements" class="slds-m-top_medium">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-record-edit-form
+                object-api-name="Lease_Agreement__c"
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+
+                <!-- SHOW ERRORS -->
+                <lightning-messages></lightning-messages>
+
+                <lightning-layout multiple-rows>
+
+                    <!-- ROW 1 -->
+
+                    <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input-field
+                            field-name="Name"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+
+                    <!-- <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input-field
+                            field-name="Property__c"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item> -->
+
+                    <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input-field
+                            field-name="Tenant__c"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input-field
+                            field-name="Agreed_Monthly_Rent__c"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+
+                    <!-- ROW 2 -->
+
+                    <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input-field
+                            field-name="Start_Date__c"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input-field
+                            field-name="End_Date__c"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="6" padding="around-small">
+                        <lightning-input-field
+                            field-name="Terms__c"
+                            required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+
+                    <!-- BUTTON -->
+
+                    <lightning-layout-item size="3" padding="around-small">
+
+                        <lightning-button
+                            label="Create Agreement"
+                            variant="brand"
+                            onclick={handleSubmit}>
+                        </lightning-button>
+
+                    </lightning-layout-item>
+
+                </lightning-layout>
+
+            </lightning-record-edit-form>
+
+        </div>
+
+    </lightning-card>
+
+</template>
